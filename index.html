@@ -19,26 +19,26 @@
   <div class="ambient-sphere-1"></div>
   <div class="ambient-sphere-2"></div>
 
-  <header class="sticky top-0 z-40 liquid-glass border-b border-black/5 dark:border-white/10 px-3 sm:px-6 py-2 sm:py-2.5 mb-4 sm:mb-6">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
-      <div class="flex items-center gap-2.5">
-        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-blue-600/15 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0 border border-blue-500/25 shadow-sm">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+  <header class="sticky top-0 z-40 liquid-glass border-b border-black/5 dark:border-white/10 px-2.5 sm:px-6 py-2 sm:py-2.5 mb-3 sm:mb-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-1.5 sm:gap-2">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-blue-600/15 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0 border border-blue-500/25 shadow-sm">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
         </div>
         <div>
-          <h1 class="text-sm sm:text-lg font-extrabold tracking-tight leading-snug">TKB Phenikaa Pro</h1>
+          <h1 class="text-xs sm:text-lg font-extrabold tracking-tight leading-snug">TKB Phenikaa</h1>
           <p class="text-[10px] sm:text-xs font-semibold opacity-65 tracking-wide hidden sm:block">smart timetable by vietany</p>
         </div>
       </div>
 
-      <div class="flex items-center gap-1.5 sm:gap-2.5">
-        <div class="liquid-glass px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full flex items-center gap-1.5 shadow-sm text-slate-800 dark:text-slate-100">
+      <div class="flex items-center gap-1 sm:gap-2.5">
+        <div class="hidden sm:flex liquid-glass px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full items-center gap-1.5 shadow-sm text-slate-800 dark:text-slate-100">
           <svg class="w-3.5 h-3.5 text-blue-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
           <span id="liveCalendarDisplay" class="text-[11px] sm:text-xs font-bold text-slate-800 dark:text-slate-100 hidden md:inline"></span>
           <span id="liveTimeDisplay" class="font-mono text-xs sm:text-sm font-black tracking-wider text-emerald-600 dark:text-emerald-400">00:00:00</span>
         </div>
 
-        <button id="toggleTimeBtn" onclick="toggleTimeDisplay()" class="liquid-glass px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold flex items-center gap-1.5 transition-all">
+        <button id="toggleTimeBtn" onclick="toggleTimeDisplay()" class="liquid-glass px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-[10.5px] sm:text-xs font-semibold flex items-center gap-1 transition-all shrink-0">
           <svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <span class="hidden sm:inline">Giờ:</span>
           <span id="timeToggleLabel" class="font-bold text-blue-600 dark:text-blue-400">Bật</span>
@@ -46,31 +46,31 @@
 
         <div class="pill-capsule rounded-full p-0.5 sm:p-1 flex items-center relative">
           <div id="levelIndicator" class="liquid-indicator"></div>
-          <button onclick="setLevel('THCS', 0)" id="btnLevel0" class="relative z-10 w-14 sm:w-16 py-1 sm:py-1.5 text-center rounded-full text-[11px] sm:text-xs font-bold transition-colors">
+          <button onclick="setLevel('THCS', 0)" id="btnLevel0" class="relative z-10 px-2 sm:w-16 py-1 sm:py-1.5 text-center rounded-full text-[10.5px] sm:text-xs font-bold transition-colors">
             THCS
           </button>
-          <button onclick="setLevel('THPT', 1)" id="btnLevel1" class="relative z-10 w-14 sm:w-16 py-1 sm:py-1.5 text-center rounded-full text-[11px] sm:text-xs font-bold transition-colors">
+          <button onclick="setLevel('THPT', 1)" id="btnLevel1" class="relative z-10 px-2 sm:w-16 py-1 sm:py-1.5 text-center rounded-full text-[10.5px] sm:text-xs font-bold transition-colors">
             THPT
           </button>
         </div>
 
         <div class="pill-capsule rounded-full p-0.5 sm:p-1 flex items-center relative">
           <div id="sessionIndicator" class="liquid-indicator"></div>
-          <button onclick="setSession('Sáng', 0)" id="btnSession0" class="relative z-10 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold flex items-center gap-1 transition-colors">
-            <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <button onclick="setSession('Sáng', 0)" id="btnSession0" class="relative z-10 px-2 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10.5px] sm:text-xs font-semibold flex items-center gap-1 transition-colors">
+            <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
             <span class="hidden sm:inline">Sáng</span>
           </button>
-          <button onclick="setSession('Chiều', 1)" id="btnSession1" class="relative z-10 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold flex items-center gap-1 transition-colors">
-            <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <button onclick="setSession('Chiều', 1)" id="btnSession1" class="relative z-10 px-2 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10.5px] sm:text-xs font-semibold flex items-center gap-1 transition-colors">
+            <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
             <span class="hidden sm:inline">Chiều</span>
           </button>
-          <button onclick="setSession('all', 2)" id="btnSession2" class="relative z-10 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-semibold flex items-center gap-1 transition-colors">
-            <svg class="w-3.5 h-3.5 text-violet-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <button onclick="setSession('all', 2)" id="btnSession2" class="relative z-10 px-2 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[10.5px] sm:text-xs font-semibold flex items-center gap-1 transition-colors">
+            <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-violet-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <span class="hidden sm:inline">Cả ngày</span>
           </button>
         </div>
 
-        <div class="liquid-glass px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold flex items-center gap-1 shrink-0">
+        <div class="hidden sm:flex liquid-glass px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold items-center gap-1 shrink-0">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
           <span id="filteredCount">0</span>
         </div>
@@ -182,7 +182,7 @@
   <script>
     let RAW_DATA = window.RAW_DATA || [];
 
-        const currentDayNumber = new Date().getDay();
+    const currentDayNumber = new Date().getDay();
     const dayMap = {
       1: { day: 'Thứ 2', index: 0 },
       2: { day: 'Thứ 3', index: 1 },
@@ -311,12 +311,16 @@
     function updateTimeDisplayState() {
       const lbl = document.getElementById('timeToggleLabel');
       if (showCardTime) {
-        lbl.textContent = 'Bật';
-        lbl.className = 'font-bold text-blue-600 dark:text-blue-400';
+        if (lbl) {
+          lbl.textContent = 'Bật';
+          lbl.className = 'font-bold text-blue-600 dark:text-blue-400';
+        }
         document.body.classList.remove('hide-card-time');
       } else {
-        lbl.textContent = 'Tắt';
-        lbl.className = 'font-bold opacity-40';
+        if (lbl) {
+          lbl.textContent = 'Tắt';
+          lbl.className = 'font-bold opacity-40';
+        }
         document.body.classList.add('hide-card-time');
       }
     }
@@ -468,17 +472,19 @@
       const activeBtn = document.getElementById('fabPeriod_' + pid);
       if (activeBtn) activeBtn.classList.add('is-active');
 
+      if (pid !== 'all' && selectedSession !== 'all') {
+        const foundPeriod = TIMELINE_CONFIG.find(p => p.id === pid);
+        if (foundPeriod) {
+          if (foundPeriod.session === 'Sáng' && selectedSession !== 'Sáng') {
+            setSession('Sáng', 0);
+          } else if (foundPeriod.session === 'Chiều' && selectedSession !== 'Chiều') {
+            setSession('Chiều', 1);
+          }
+        }
+      }
+
       toggleFabMenu();
       animatedRender(render);
-
-      if (pid !== 'all') {
-        setTimeout(() => {
-          const target = document.getElementById('period-section-' + pid);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }, 100);
-      }
     }
 
     function togglePinTeacher(name, e) {
@@ -718,7 +724,9 @@
         return true;
       });
 
-      document.getElementById('filteredCount').textContent = matchedItems.length;
+      const countEl = document.getElementById('filteredCount');
+      if (countEl) countEl.textContent = matchedItems.length;
+
       const timelineContainer = document.getElementById('timelineContainer');
       const emptyState = document.getElementById('emptyState');
 
@@ -784,10 +792,10 @@
               <div class="item-card rounded-2xl p-3 sm:p-3.5 flex flex-col justify-between active:scale-95 sm:hover:scale-[1.02] sm:hover:-translate-y-0.5 ${pinClass}">
                 <div>
                   <div class="flex items-center justify-between gap-1 mb-1.5">
-                    <span class="text-xs sm:text-sm font-extrabold text-blue-600 dark:text-blue-400 tracking-tight">
+                    <span onclick="applySearch('${item.class}')" class="text-xs sm:text-sm font-extrabold text-blue-600 dark:text-blue-400 tracking-tight cursor-pointer hover:underline" title="Lọc theo lớp ${item.class}">
                       ${item.class || 'Toàn trường'}
                     </span>
-                    <span class="text-[9.5px] sm:text-[10px] font-extrabold px-2 py-0.5 rounded-lg border text-truncate-safe max-w-[90px] sm:max-w-[100px] ${design.badge}">
+                    <span onclick="applySearch('${item.subject}')" class="text-[9.5px] sm:text-[10px] font-extrabold px-2 py-0.5 rounded-lg border text-truncate-safe max-w-[90px] sm:max-w-[100px] cursor-pointer hover:opacity-80 transition-opacity ${design.badge}" title="Lọc theo môn ${item.subject}">
                       ${item.subject}
                     </span>
                   </div>
@@ -802,10 +810,10 @@
                   </div>
                 </div>
 
-                <div class="time-slot-wrapper mt-2 pt-1.5 border-t border-black/5 dark:border-white/10 flex items-center justify-between text-[10px] sm:text-[10.5px] font-bold text-slate-800 dark:text-slate-200">
+                <div class="time-slot-wrapper mt-2 pt-1.5 border-t border-black/5 dark:border-white/10 flex items-center justify-between text-[10px] sm:text-[10.5px] font-bold">
                   <div class="flex items-center gap-1.5">
-                    <svg class="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    <span class="text-slate-800 dark:text-slate-200">${periodCfg.time}</span>
+                    <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span class="card-time-val">${periodCfg.time}</span>
                   </div>
                   <button onclick="togglePinTeacher('${item.teacher}', event)" title="Ghim giáo viên này" class="pin-btn-footer p-0.5 rounded hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
                     ${pinSvg}
@@ -850,7 +858,7 @@
                 </div>
               </div>
               <div class="flex items-center gap-3">
-                <span class="text-xs sm:text-sm font-black px-3.5 py-1 rounded-full bg-black/10 dark:bg-white/15 shrink-0">
+                <span class="period-count-badge text-xs sm:text-sm font-black px-3.5 py-1 rounded-full shrink-0">
                   Tổng: ${itemsInPeriod.length} lớp
                 </span>
                 <svg class="w-5 h-5 opacity-60 chevron-icon shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
