@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="theme-sang min-h-screen pb-24 relative">
@@ -182,8 +182,17 @@
   <script>
     let RAW_DATA = window.RAW_DATA || [];
 
-    let selectedDay = 'Thứ 2';
-    let selectedDayIndex = 0;
+        const currentDayNumber = new Date().getDay();
+    const dayMap = {
+      1: { day: 'Thứ 2', index: 0 },
+      2: { day: 'Thứ 3', index: 1 },
+      3: { day: 'Thứ 4', index: 2 },
+      4: { day: 'Thứ 5', index: 3 },
+      5: { day: 'Thứ 6', index: 4 }
+    };
+    const initialDayConfig = dayMap[currentDayNumber] || { day: 'Thứ 2', index: 0 };
+    let selectedDay = initialDayConfig.day;
+    let selectedDayIndex = initialDayConfig.index;
     let selectedSession = 'Sáng';
     let selectedSessionIndex = 0;
     let selectedLevel = 'THCS';
@@ -784,7 +793,7 @@
                   </div>
                   
                   <div class="flex items-center justify-between gap-1 pt-0.5">
-                    <h3 class="text-xs sm:text-[13px] font-bold opacity-90 cursor-pointer hover:text-emerald-600 transition-colors flex-1 line-clamp-2 leading-tight break-words" onclick="applySearch('${item.teacher}')" title="${item.teacher}">
+                    <h3 class="teacher-name-title font-bold opacity-95 cursor-pointer hover:text-blue-600 transition-colors flex-1" onclick="applySearch('${item.teacher}')" title="${item.teacher}">
                       ${item.teacher}
                     </h3>
                     <button onclick="togglePinTeacher('${item.teacher}', event)" title="Ghim giáo viên này" class="pin-btn-row2 shrink-0 p-0.5 rounded hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
@@ -835,8 +844,8 @@
                 <div class="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-black ${pillGradient} tracking-wider flex items-center gap-1.5 shrink-0">
                   <span>${periodCfg.name.toUpperCase()}</span>
                 </div>
-                <div class="flex items-center gap-2 text-xs sm:text-sm font-extrabold tracking-wide text-emerald-950 dark:text-emerald-100">
-                  <svg class="w-4 h-4 text-emerald-700 dark:text-emerald-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <div class="period-time-container flex items-center gap-1.5 text-xs sm:text-sm font-extrabold tracking-wide px-2.5 py-1 rounded-full shrink-0">
+                  <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                   <span>${periodCfg.time}</span>
                 </div>
               </div>
